@@ -50,15 +50,9 @@
 						</goals>
 					</execution>
 					<execution>
-						<id>bower install</id>
+						<id>webpack build</id>
 						<goals>
-							<goal>bower</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>gulp build</id>
-						<goals>
-							<goal>gulp</goal>
+							<goal>webpack</goal>
 						</goals>
 					</execution>
 				</executions>
