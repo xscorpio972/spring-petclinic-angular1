@@ -10,7 +10,9 @@ module.exports = {
 	  app: './src/scripts/app.module.ts',
 	  vendor: [
 	           'angular',
-	           'angular-ui-router'
+	           'angular-ui-router',
+	           'jquery',
+	           'bootstrap'
 	           ]
   },
   output: {
@@ -20,14 +22,23 @@ module.exports = {
   devtool: 'source-map',
   resolve: {
       root: __dirname,
-      extensions: ['', '.ts', '.js', '.json']
+      extensions: ['', '.ts', '.js', '.json'],
+      alias: {
+    	  jquery: "jquery/jquery.js"
+      }
   },
   resolveLoader: {
       modulesDirectories: ["node_modules"]
   },
   plugins: [
-	new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"vendor.bundle.js") ,
+	new webpack.optimize.CommonsChunkPlugin("vendor", "vendor.bundle.js") ,
 	new CopyWebpackPlugin([ { from: './src/images', to: 'images' } ])
+	,
+	new webpack.ProvidePlugin({
+		  jQuery: 'jquery',
+	      $: 'jquery',
+	      jquery: 'jquery'
+	    })
   ],
   module: {
 	preloaders: preloaders,
