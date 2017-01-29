@@ -2,11 +2,13 @@ import * as angular from "angular";
 import "angular-ui-router";
 import {CommonModule} from "./common/common.module";
 import {WelcomeModule} from "./welcome/welcome.module";
+import {OwnerListModule} from "./owner/list/owner-list.module";
 import "bootstrap/css/bootstrap.min.css";
 import "../less/petclinic.less";
+
 /* App Module */
 angular.module("petClinicApp", [
-    "ui.router", CommonModule, WelcomeModule])
+    "ui.router", CommonModule, WelcomeModule, OwnerListModule])
     .config(["$stateProvider", "$urlRouterProvider", "$locationProvider", "$httpProvider", function(
     $stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
 
