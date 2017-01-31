@@ -3,12 +3,13 @@ import "angular-ui-router";
 import {CommonModule} from "./common/common.module";
 import {WelcomeModule} from "./welcome/welcome.module";
 import {OwnerListModule} from "./owner/list/owner-list.module";
+import {OwnerDetailsModule} from "./owner/details/owner-details.module";
 import "bootstrap/css/bootstrap.min.css";
 import "../less/petclinic.less";
 
 /* App Module */
 angular.module("petClinicApp", [
-    "ui.router", CommonModule, WelcomeModule, OwnerListModule])
+    "ui.router", CommonModule, WelcomeModule, OwnerListModule, OwnerDetailsModule])
     .config(["$stateProvider", "$urlRouterProvider", "$locationProvider", "$httpProvider", function(
     $stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
 
