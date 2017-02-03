@@ -3,7 +3,8 @@ import {Type} from "./type";
 export interface Pet {
     id: number;
     name: string;
-    birthDate: string;
+    birthDate: Date;
     new: boolean;
-    type: Type;   
+    type: Type;
+    owner: string; 
 }
