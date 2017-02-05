@@ -1,4 +1,5 @@
 import {Type} from "./type";
+import {Visit} from "../visits/visit";
 
 export interface Pet {
     id: number;
@@ -6,5 +7,6 @@ export interface Pet {
     birthDate: Date;
     new: boolean;
     type: Type;
-    owner: string; 
+    owner: string;
+    visits: Visit[];
 }
