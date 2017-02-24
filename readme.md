@@ -5,7 +5,7 @@
 
 ## Running petclinic locally
 ```
-	git clone https://github.com/spring-petclinic/spring-petclinic-angular1.git
+	git clone https://github.com/xscorpio972/spring-petclinic/spring-petclinic-angular1.git
 	cd spring-petclinic
 	./mvnw clean install
 	cd spring-petclinic-server
